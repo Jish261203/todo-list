@@ -8,7 +8,7 @@ const Home = () => {
 
 	const [tasks, setTask] = useState(initial);
 	const [title, setTitle] = useState("");
-	const [description, setDescrption] = useState("");
+	const [descriptions, setDescrption] = useState("");
 
 	const submitHandler = (e) => {
 		e.preventDefault();
@@ -16,7 +16,7 @@ const Home = () => {
 			...tasks,
 			{
 				title,
-				description,
+				descriptions,
 			},
 		]);
 		setTitle("");
@@ -46,8 +46,8 @@ const Home = () => {
 					}}
 				/>
 				<textarea
-					placeholder="description"
-					value={description}
+					placeholder="descriptions"
+					value={descriptions}
 					onChange={(e) => {
 						setDescrption(e.target.value);
 					}}></textarea>
@@ -59,7 +59,7 @@ const Home = () => {
 					<Task
 						key={index}
 						title={item.title}
-						description={item.description}
+						descriptions={item.descriptions}
 						deleteTask={deleteTask}
 						index={index}
 					/>
