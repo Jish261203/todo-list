@@ -4,6 +4,8 @@ import './App.css';
 // import Contact from './Components/Contact';
 import Header from './Components/Header';
 import Home from './Components/home';
+import About from "./Components/About";
+
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 
 
@@ -15,8 +17,7 @@ function App() {
         <Routes>
 
         <Route path='/' element={<Home/>}/>
-        {/* <Route path='/about' element={ <About/>}/>
-        <Route path='/contact' element={<Contact/>}/> */}
+        <Route path='/about' element={ <About/>}/>
         </Routes>
        
     </BrowserRouter>
